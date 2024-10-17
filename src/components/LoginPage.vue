@@ -36,7 +36,7 @@ const login = () => {
   if (email.value === correctEmail && password.value === correctPassword) {
     console.log('Login successful!');
     errorMessage.value = ''; // Clear any previous error message
-    router.push('/dashboard'); // Redirect to the profile page
+    router.push('/dashboard/profile'); // Redirect to the profile page
   } else {
     errorMessage.value = 'Invalid email or password. Please try again.';
   }
@@ -56,7 +56,7 @@ const login = () => {
 }
 
 .login-box {
-  background-color: white;
+  background-color: rgb(5, 5, 5);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);

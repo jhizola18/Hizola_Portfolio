@@ -1,6 +1,9 @@
 <template>
     <div class="dashboard">
-      <nav class="sidebar">
+      <div class="header">
+        <h1 class="title">Justine Hizola's Game Programmer Portfolio</h1>
+      </div>
+      <nav class="topbar">
         <ul>
           <li><router-link to="/dashboard/profile">Profile</router-link></li>
           <li><router-link to="/dashboard/portfolio">Portfolio</router-link></li>
@@ -23,27 +26,60 @@
   <style scoped>
   .dashboard {
     display: flex;
+    flex-direction: column;
   }
-  .sidebar {
-    width: 200px;
+  
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #2e2e2e; /* Same background color as the topbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .title {
+    color: #dce4dc;
+    font-size: 2rem;
+    margin: 0;
+    margin-left: 180px; /* Add margin to the left for spacing */
+  }
+  
+  .topbar {
     background: #333;
     color: white;
-    padding: 20px;
+    padding: 10px;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
   }
-  .sidebar ul {
+  
+  .topbar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
   }
-  .sidebar ul li {
-    margin-bottom: 10px;
+  
+  .topbar ul li {
+    margin-bottom: 0;
   }
-  .sidebar ul li a {
+  
+  .topbar ul li a {
     color: white;
     text-decoration: none;
   }
+  
   .content {
-    flex: 1;
     padding: 20px;
+    flex: 1;
+    margin-top: 160px; /* Ensure the content starts below the fixed header and topbar */
   }
   </style>
   
