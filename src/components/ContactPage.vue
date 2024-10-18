@@ -41,14 +41,16 @@ export default {
 <style scoped>
 .contact-page {
   padding: 20px;
-  background-color: #f4f4f4; /* Light background for better contrast */
+  background-color: rgba(34, 33, 32, 0.8); /* Dark brown with 80% opacity */
   border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
   text-align: center; /* Center-align all text */
+  color: #f4f4f4; /* Light text color for readability */
 }
 
 .contact-header {
   margin-bottom: 10px; /* Space below the header */
+  color: #f4f4f4; /* Ensure header text is also light */
 }
 
 .contact-list {
@@ -69,11 +71,11 @@ export default {
 .contact-list i {
   margin-right: 10px; /* Space between the icon and the text */
   font-size: 1.5rem; /* Adjust icon size */
-  color: #0e0f0f; /* Icon color */
+  color: #f4f4f4; /* Light icon color for readability */
 }
 
 .contact-list a {
-  color: #007bff; /* Link color */
+  color: #1ea1f2; /* Light blue color for links */
   text-decoration: none; /* Remove underline */
 }
 
@@ -83,5 +85,10 @@ export default {
 
 .contact-list strong {
   margin-right: 10px; /* Space between the label and the link */
+  color: #f4f4f4; /* Ensure strong text is readable */
+}
+
+p {
+  color: #f4f4f4; /* Ensure general text is readable */
 }
 </style>

@@ -31,58 +31,45 @@ const resumeUrl = ref('/Hizola_Justine_CV.pdf'); // URL to your resume file in t
 </script>
 
 <style scoped>
-
-/* Add these styles to your global CSS or main styles file */
-html, body {
-  margin: 0; /* Remove default margin */
-  height: 100%; /* Make sure html and body take full height */
-  
-}
-
-
 .about-me {
- 
-  display: flex; /* Add flex display */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center content horizontally */
-  background-color: BLACK;
-  background-size: cover; /* Cover the entire section */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  background-position: center; /* Center the background image */
-  color: #131212; /* Light gray text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none; /* Remove background color */
+  padding: 50px;
+  height: auto; /* Adjust height to fit content */
+  color: white; /* Light text for contrast */
 }
-
 
 h1 {
-  color: #181616; /* Light gray heading color */
-  margin: 0; /* Reset margin */
- 
-  text-align: center; /* Center the heading text */
-  
+  color: #fff; /* White heading for better visibility */
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
 }
 
-/* Flex container for profile info */
 .profile-section {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  color: rgb(2, 2, 2);
+  padding: 30px;
+  border-radius: 10px; /* Optional: Rounded corners */
+  max-width: 800px;
+  width: 100%;
+  background: none; /* No background */
 }
 
-/* Profile information styling */
 .profile-info {
-  max-width: 600px; /* Limit the width */
-  text-align: justify; /* Align text to justify */
-  padding: 0; /* Remove any padding */
+  text-align: justify;
+  color: #e0e0e0; /* Light gray for readability */
 }
 
 .info-group {
   margin-bottom: 1.5rem;
-  background-color: NONE;
 }
 
 .info-group p {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 a {

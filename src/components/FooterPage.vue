@@ -2,7 +2,7 @@
   <footer class="footer">
     <p>&copy; 2024 Justine Hizola. All rights reserved.</p>
     <nav class="footer-nav">
-
+      
     </nav>
   </footer>
 </template>
@@ -15,10 +15,13 @@ export default {
 
 <style scoped>
 .footer {
-  background-color: #333;
+  background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
   color: white;
   padding: 1rem;
   text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-nav {

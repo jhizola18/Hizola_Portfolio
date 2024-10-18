@@ -59,13 +59,13 @@ export default {
 <style scoped>
 body {
   background-color: #121212; /* Dark background for the entire page */
-  color: #1a1616; /* Light gray text color for better contrast */
+  color: #ffffff; /* Light gray text color for better contrast */
   margin: 0; /* Remove default margin */
   font-family: Arial, sans-serif; /* Set a default font */
 }
 
 h2, h3 {
-  color: #1f1717; /* White text color for headings */
+  color: #f5f5f5; /* White text color for headings */
 }
 
 h2 {
@@ -81,7 +81,7 @@ h2 {
 }
 
 .portfolio-item {
-  background-color: #fffcfc; /* Dark background for the items */
+  background-color: rgba(41, 37, 37, 0.7); /* Black background with transparency */
   border: 1px solid #080808; /* Darker border around each item */
   padding: 10px; /* Padding for the item */
   border-radius: 5px; /* Rounded corners */
@@ -89,6 +89,7 @@ h2 {
   display: flex; /* Use flexbox to align items */
   flex-direction: column; /* Stack contents vertically */
   justify-content: flex-start; /* Align items to the top */
+  color: #f5f5f5;
 }
 
 .repo-image {
