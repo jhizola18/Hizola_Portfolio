@@ -2,6 +2,7 @@
   <footer class="footer">
     <p>&copy; 2024 Justine Hizola. All rights reserved.</p>
     <nav class="footer-nav">
+
     </nav>
   </footer>
 </template>

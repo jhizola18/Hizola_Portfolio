@@ -11,7 +11,8 @@
 
         <div class="info-group" v-if="resumeFile">
           <p>
-            <strong>Here is my Resume:</strong> <a :href="resumeUrl" target="_blank">{{ resumeFile.name }}</a>
+            <strong>Here is my Resume:</strong> 
+            <a :href="resumeUrl" target="_blank">{{ resumeFile.name }}</a>
           </p>
         </div>
       </div>
@@ -30,49 +31,66 @@ const resumeUrl = ref('/Hizola_Justine_CV.pdf'); // URL to your resume file in t
 </script>
 
 <style scoped>
-/* Style for the body and general layout */
-body {
-  background-color: #2e2e2e; /* Dark gray background for the entire website */
-  color: white; /* White text color for readability */
-  font-family: Arial, sans-serif; /* Optional: set a font for consistency */
+
+/* Add these styles to your global CSS or main styles file */
+html, body {
   margin: 0; /* Remove default margin */
-  padding: 0;
+  height: 100%; /* Make sure html and body take full height */
+  
 }
 
-/* Style for the About Me section */
+
 .about-me {
-  display: flex;
+ 
+  display: flex; /* Add flex display */
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center content horizontally */
-  padding: 0px; /* Add padding for space */
+  background-color: BLACK;
+  background-size: cover; /* Cover the entire section */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  background-position: center; /* Center the background image */
+  color: #131212; /* Light gray text color */
 }
 
+
 h1 {
-  margin-left: -600px; /* Center the heading */
-  color: #1c1f1c; /* Accent color for the heading */
-  margin-bottom: 1.5rem;
-  margin-top: 50px;
+  color: #181616; /* Light gray heading color */
+  margin: 0; /* Reset margin */
+ 
+  text-align: center; /* Center the heading text */
+  
 }
 
 /* Flex container for profile info */
 .profile-section {
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  padding: 20px;
+  justify-content: center; /* Center horizontally */
+  color: rgb(2, 2, 2);
 }
 
-/* Style for the profile information */
+/* Profile information styling */
 .profile-info {
-  max-width: 600px; /* Limit the width of the text content */
-  text-align: justify; /* Align the text to the center */
+  max-width: 600px; /* Limit the width */
+  text-align: justify; /* Align text to justify */
+  padding: 0; /* Remove any padding */
 }
 
 .info-group {
   margin-bottom: 1.5rem;
+  background-color: NONE;
 }
 
 .info-group p {
   font-size: 1rem;
   line-height: 1.5;
+}
+
+a {
+  color: #66ccff; /* Light blue for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
 }
 </style>
