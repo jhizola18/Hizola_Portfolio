@@ -4,18 +4,15 @@
     <div class="profile-section">
       <div class="profile-info">
         <div class="info-group">
-          <h2>Biography</h2>
-          <p>{{ biography }}</p>
-        </div>
-
-        <div class="info-group">
-          <h2>Skills</h2>
-          <p>{{ skills }}</p>
+          <p>
+            {{ biography }}
+          </p>
         </div>
 
         <div class="info-group" v-if="resumeFile">
-          <h2>Resume</h2>
-          <p>{{ resumeFile.name }}</p>
+          <p>
+            <strong>Here is my Resume:</strong> <a :href="resumeUrl" target="_blank">{{ resumeFile.name }}</a>
+          </p>
         </div>
       </div>
     </div>
@@ -26,9 +23,10 @@
 import { ref } from 'vue';
 
 // Sample data for demonstration
-const biography = ref('I am a 4th year Computer Engineering Student...');
-const skills = ref('C/C++, C#, Java, Git, MySQL, Unreal Engine');
-const resumeFile = ref(new File(["dummy content"], "Justine_Hizola_Resume.pdf")); // Dummy file for demonstration
+const biography = ref('Hello! I’m Justine, a dedicated 4th-year Computer Engineering student at the Technological Institute of the Philippines. I have a strong foundation in programming languages such as C/C++, C#, and Java, complemented by proficiency in tools like Git and MySQL. My passion for game development has led me to explore Game Programming, where I’m currently honing my skills through personal projects. I am committed to continuously improving as a game programmer and am excited about the possibilities that lie ahead in the world of technology and gaming.');
+
+const resumeFile = ref(new File(["dummy content"], "Hizola_Justine_CV.pdf")); // Dummy file for demonstration
+const resumeUrl = ref('/Hizola_Justine_CV.pdf'); // URL to your resume file in the public directory
 </script>
 
 <style scoped>
@@ -66,17 +64,11 @@ h1 {
 /* Style for the profile information */
 .profile-info {
   max-width: 600px; /* Limit the width of the text content */
-  text-align: center; /* Align the text to the center */
+  text-align: justify; /* Align the text to the center */
 }
 
 .info-group {
   margin-bottom: 1.5rem;
-}
-
-.info-group h2 {
-  font-size: 1.2rem;
-  color: #4CAF50; /* Accent color */
-  
 }
 
 .info-group p {
